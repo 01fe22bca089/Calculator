@@ -1,11 +1,4 @@
 public class Calculator {
-    /**
-     * The function "add" takes two float numbers as input and returns their sum.
-     * 
-     * @param num1 The first number to be added.
-     * @param num2 The second number to be added.
-     * @return The sum of num1 and num2.
-     */
     public float add(float num1, float num2) {
         return num1 + num2;
     }
@@ -27,15 +20,26 @@ public class Calculator {
         }
     }
 
+    public float square(float num) {
+        return num * num;
+    }
+
+    public float cube(float num) {
+        return num * num * num;
+    }
+
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
 
         float num1 = 10.5f;
         float num2 = 5.2f;
+        float num3 = 4.0f;
 
         System.out.println("Addition: " + calculator.add(num1, num2));
         System.out.println("Subtraction: " + calculator.subtract(num1, num2));
         System.out.println("Multiplication: " + calculator.multiply(num1, num2));
         System.out.println("Division: " + calculator.divide(num1, num2));
+        System.out.println("Square: " + calculator.square(num3));
+        System.out.println("Cube: " + calculator.cube(num3));
     }
 }
